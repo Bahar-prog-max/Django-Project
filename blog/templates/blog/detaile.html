@@ -1,0 +1,15 @@
+{% extends 'parent/base.html' %}
+{% load jformat %}
+{% block title %}Post Detaile{% endblock %}
+
+
+{% block content %}
+<h1>post detaile</h1>
+<h2>{{post.title}} by {{post.auther}}</h2>
+<p>{{post.description}}</p>
+<hr>
+<p>{{post.publish|jformat:"%Y/%m/%d-%H:%M"}}</p>
+
+{% for post in posts %}
+{% endfor %}
+{% endblock %}
